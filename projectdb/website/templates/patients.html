@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Patients</h1>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Study ID</th>
+        <th scope="col">Sex</th>
+        <th scope="col">Age</th>
+        <th scope="col">Consent for future use?</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% if patient %}
+            {% for p in patient %}
+                <tr> 
+                    <td>{{p.id}}</td>  
+                    <td>{{p.study_id}}</td>  
+                    <td>{{p.sex}}</td>  
+                    <td>{{p.age}}</td>  
+                    <td>{{p.is_consent}}</td>  
+                </tr>
+            {% endfor %}
+        {% endif %}
+    </tbody>
+  </table>
+
+{% endblock %}

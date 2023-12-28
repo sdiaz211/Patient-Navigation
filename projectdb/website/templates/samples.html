@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Samples</h1>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Study ID</th>
+        <th scope="col">Patient ID</th>
+        <th scope="col">Material</th>
+    </tr>
+    </thead>
+    <tbody>
+        {% if sample %}
+            {% for s in sample %}
+                <tr> 
+                    <td>{{s.id}}</td>  
+                    <td>{{s.study_id}}</td>  
+                    <td>{{s.patient_id}}</td>  
+                    <td>{{s.material}}</td>  
+                </tr>
+            {% endfor %}
+        {% endif %}
+    </tbody>
+</table>
+
+{% endblock %}

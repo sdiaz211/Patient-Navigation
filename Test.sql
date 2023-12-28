@@ -1,0 +1,26 @@
+CREATE TABLE IF NOT EXISTS `Test_data` (
+    `type` VARCHAR(50) NOT NULL,
+    `data` INT NOT NULL,
+    `aliquot_id` INT NOT NULL,
+    PRIMARY KEY (`aliquot_id`),
+    CONSTRAINT FOREIGN KEY  `Test_data` (`aliquot_id`) REFERENCES `Aliquot_data` (`id`)
+);
+INSERT INTO `Test_data` VALUES ('Protein Quantification - Zonulin',342,26697),
+	('Protein Quantification - Zonulin',185,88647),
+	('Protein Quantification - Zonulin',916,62034),
+	('Protein Quantification - Zonulin',91,23162),
+	('Protein Quantification - Zonulin',456,50837),
+	('Protein Quantification - Zonulin',44,93972),
+	('Protein Quantification - Zonulin',602,62750),
+	('Protein Quantification - Zonulin',114,52249),
+	('Protein Quantification - Zonulin',498,45148),
+	('Protein Quantification - Zonulin',897,87693),
+	('Protein Quantification - Zonulin',411,38165),
+	('Protein Quantification - Zonulin',21,98306),
+	('Protein Quantification - Zonulin',699,40575),
+	('Protein Quantification - Zonulin',128,88076),
+	('Protein Quantification - Zonulin',821,60164),
+	('Protein Quantification - Zonulin',127,57524),
+	('Protein Quantification - Zonulin',585,88029),
+	('Protein Quantification - Zonulin',832,47243),
+	('Protein Quantification - Zonulin',502,28458);

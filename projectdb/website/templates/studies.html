@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Studies</h1>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Researcher</th>
+        <th scope="col"># of Target Patients</th>
+        <th scope="col"># of Recorded Patients</th>
+        <th scope="col"># of Target Samples</th>
+        <th scope="col"># of Samples Collected</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% if study %}
+            {% for s in study %}
+                <tr> 
+                    <td>{{s.id}}</td>  
+                    <td>{{s.researcher}}</td>  
+                    <td>{{s.num_target_patients}}</td>  
+                    <td>{{s.num_recorded_patients}}</td>  
+                    <td>{{s.num_target_samples}}</td>  
+                    <td>{{s.num_samples_collected}}</td>  
+                </tr>
+            {% endfor %}
+        {% endif %}
+    </tbody>
+  </table>
+
+{% endblock %}

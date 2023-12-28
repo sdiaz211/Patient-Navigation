@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Tests</h1>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Type</th>
+        <th scope="col">Data</th>
+        <th scope="col">Aliquot ID</th>
+    </tr>
+    </thead>
+    <tbody>
+        {% if test %}
+            {% for t in test %}
+                <tr> 
+                    <td>{{t.type}}</td>  
+                    <td>{{t.data}}</td>  
+                    <td>{{t.aliquot_id}}</td>  
+                </tr>
+            {% endfor %}
+        {% endif %}
+    </tbody>
+</table>
+
+{% endblock %}

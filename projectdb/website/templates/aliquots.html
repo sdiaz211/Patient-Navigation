@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Aliquots</h1>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Sample ID</th>
+        <th scope="col">Material</th>
+    </tr>
+    </thead>
+    <tbody>
+        {% if aliquot %}
+            {% for a in aliquot %}
+                <tr> 
+                    <td>{{a.id}}</td>  
+                    <td>{{a.sample_id}}</td>  
+                    <td>{{a.material}}</td>  
+                </tr>
+            {% endfor %}
+        {% endif %}
+    </tbody>
+</table>
+
+{% endblock %}
